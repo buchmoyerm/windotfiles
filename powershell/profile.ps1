@@ -7,9 +7,6 @@ $global:PSDefaultModulePath = $env:PSModulePath
 $modulePath = (join-path $powershell Modules)
 $env:PSModulePath = $modulePath + ";" + $env:PSModulePath
 
-# Powershell Modules
-Import-Module "posh-git"
-
 # Load Jump-Location profile
 Import-Module 'C:\ProgramData\Chocolatey\lib\Jump-Location.0.6.0\tools\Jump.Location.psd1'
 
