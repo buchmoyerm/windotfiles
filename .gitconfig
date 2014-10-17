@@ -1,0 +1,13 @@
+[user]
+	name = Mark Buchmoyer
+	email = buchmoyerm@gmail.com
+[core]
+	autocrlf = true
+	excludesfile = C:\\Users\\mbuchmoyer\\Documents\\gitignore_global.txt
+[difftool "sourcetree"]
+	cmd = 'C:/Program Files (x86)/WinMerge/WinMergeU.exe' \"$LOCAL\" \"$REMOTE\"
+[push]
+	default = matching
+[mergetool "sourcetree"]
+	cmd = 'C:/Program Files/Perforce/p4merge.exe' \"$BASE\" \"$LOCAL\" \"$REMOTE\" \"$MERGED\"
+	trustExitCode = true
