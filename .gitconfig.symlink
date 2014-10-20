@@ -3,6 +3,6 @@
 	email = buchmoyerm@gmail.com
 [core]
 	autocrlf = true
-	excludefiles = ~/.gitignore_global.txt
+	excludesfile = ~/.gitignore_global.txt
 [push]
 	default = matching
