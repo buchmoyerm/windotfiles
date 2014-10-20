@@ -1,0 +1,8 @@
+[user]
+	name = Mark Buchmoyer
+	email = buchmoyerm@gmail.com
+[core]
+	autocrlf = true
+	excludefiles = ~/.gitignore_global.txt
+[push]
+	default = matching
