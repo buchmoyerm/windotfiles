@@ -3,11 +3,24 @@
 
 Import-Module 	"..\powershell\Modules\Pscx\Pscx.dll"
 
-#New-Symlink 	"..\..\AppData\Roaming\ConEmu.xml"		        "..\conemu.xml"
-New-Symlink 	"..\..\.gitconfig"								            "..\.gitconfig"
-New-Symlink   "..\..\gitignore_global.txt"                  "..\gitignore_global.txt"
+#remove old git files
+Remove-Item "..\..\.gitconfig"
+Remove-Item "..\..\.gitignore_global.txt"
 
+#create git symlinks
+New-Hardlink 	"..\..\.gitconfig"								            "..\.gitconfig.symlink"
+New-Hardlink   "..\..\.gitignore_global.txt"                  "..\.gitignore_global.txt.symlink"
+
+#remove vim files
+Remove-Item "..\..\.vimrc"
+
+#create vim symlink
 New-Symlink 	"..\..\.vimrc"								            "..\.vimrc"
 
+#remove old folder junctions
+#Remove-Item "..\..\Documents\WindowsPowerShell"
+#Remove-Item "..\..\.vim"
+
+#create new folder junctions
 New-Junction 	"..\..\Documents\WindowsPowerShell"				    "..\powershell"
 New-Junction 	"..\..\.vim"								                  "..\.vim"

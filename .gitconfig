@@ -1,8 +1,0 @@
-[user]
-	name = Mark Buchmoyer
-	email = buchmoyerm@gmail.com
-[core]
-	autocrlf = true
-	excludefiles = %HOMEDRIVE%%HOMEPATH%\\gitignore_global.txt
-[push]
-	default = matching
