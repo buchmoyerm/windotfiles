@@ -1,5 +1,8 @@
 Import-Module PSReadLine
 
+# Add git to evironment variable location
+$env:path += ";${env:ProgramFiles(x86)}\Git\bin"
+
 $powershell = (join-path $env:USERPROFILE dotfiles/powershell)
 
 # Environment Variables
