@@ -8,8 +8,14 @@
 map <F7> :tabp<CR>
 map <F8> :tabn<CR>
 map <F5> :e<CR>
-map <C-j> <C-W>j
-map <C-k> <C-W>k
-map <C-h> <C-W>h
-map <C-l> <C-W>l
+
+"##############################################################################                                                                         
+" Easier split navigation                                                                                                                               
+"##############################################################################                                                                         
+
+" Use ctrl-[hjkl] to select the active split!
+nmap <silent> <c-k> :wincmd k<CR>                                                                                                                       
+nmap <silent> <c-j> :wincmd j<CR>                                                                                                                       
+nmap <silent> <c-h> :wincmd h<CR>                                                                                                                       
+nmap <silent> <c-l> :wincmd l<CR>
 
