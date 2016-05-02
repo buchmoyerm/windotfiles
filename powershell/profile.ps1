@@ -10,8 +10,5 @@ $global:PSDefaultModulePath = $env:PSModulePath
 $modulePath = (join-path $powershell Modules)
 $env:PSModulePath = $modulePath + ";" + $env:PSModulePath
 
-# Load Jump-Location profile
-Import-Module 'C:\ProgramData\Chocolatey\lib\Jump-Location.0.6.0\tools\Jump.Location.psd1'
-
 # Profile Extensions
 . (join-path $powershell aliases.ps1)
