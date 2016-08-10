@@ -1,7 +1,7 @@
 Import-Module PSReadLine
 
-# Add git to evironment variable location
-$env:path += ";${env:ProgramFiles(x86)}\Git\bin"
+# Load posh-git example profile
+. 'C:\Program Files\WindowsPowerShell\Modules\posh-git\0.6.1.20160330\profile.example.ps1'
 
 $powershell = (join-path $env:USERPROFILE dotfiles/powershell)
 
@@ -12,3 +12,10 @@ $env:PSModulePath = $modulePath + ";" + $env:PSModulePath
 
 # Profile Extensions
 . (join-path $powershell aliases.ps1)
+
+#################################################
+# => Settings
+#################################################
+Set-PSReadlineOption -EditMode Vi
+
+$GitPromptSettings.EnableFileStatus = $false # no file status in poshgit
